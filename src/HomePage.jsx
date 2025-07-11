@@ -24,7 +24,7 @@ function HomePage({ setQuestions, setResumeText, setJobDescription }) {
     if (resumeFile) formData.append('resume', resumeFile);
 
     try {
-      const response = await fetch('http://localhost:5000/generate-questions', {
+      const response = await fetch('https://prepgenie-app.onrender.com/generate-questions', {
         method: 'POST',
         body: formData,
       });
