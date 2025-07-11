@@ -72,7 +72,7 @@ function PracticePage({ questions, setQuestions, resumeText, jobDescription }) {
     formData.append("jobDescription", jobDescription);
 
     try {
-      const response = await fetch("https://prepgenie-backend.onrender.com/generate-more-questions", {
+      const response = await fetch("https://prepgenie-app.onrender.com/generate-more-questions", {
         method: "POST",
         body: formData,
       });
@@ -101,7 +101,7 @@ function PracticePage({ questions, setQuestions, resumeText, jobDescription }) {
     setShowResults(false);
 
     try {
-      const response = await fetch("https://prepgenie-backend.onrender.com/evaluate-answers", {
+      const response = await fetch("https://prepgenie-app.onrender.com/evaluate-answers", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
